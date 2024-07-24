@@ -1,2 +1,2 @@
-# nikolayshangov.com
+# Nikolay Shangov
 nikolayshangov.com
