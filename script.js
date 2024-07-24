@@ -1,5 +1,5 @@
 // Set the date we're counting down to
-const countDownDate = new Date("Aug 1, 2024 23:59:59").getTime();
+const countDownDate = new Date("Dec 31, 2024 23:59:59").getTime();
 
 // Update the count down every 1 second
 const countdownfunction = setInterval(function() {
@@ -26,3 +26,6 @@ const countdownfunction = setInterval(function() {
         document.getElementById("timer").innerHTML = "EXPIRED";
     }
 }, 1000);
+
+// Set the current year in the footer
+document.getElementById("year").textContent = new Date().getFullYear();

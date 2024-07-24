@@ -10,6 +10,7 @@ body {
     color: #fff;
     font-family: 'Arial', sans-serif;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -37,7 +38,7 @@ h1 {
 }
 
 p {
-    font-size: 1.2em;
+    font-size: 1.5em; /* Increased font size */
     margin-bottom: 40px;
 }
 
@@ -63,4 +64,10 @@ p {
 
 #timer {
     font-size: 1.5em;
+}
+
+/* Footer styling */
+footer {
+    margin-top: 20px;
+    font-size: 1em;
 }
