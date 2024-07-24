@@ -1,63 +1,377 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <nav>
-            <div class="logo">MyPortfolio</div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#work">Work</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section id="hero">
-        <div class="hero-content">
-            <h1>Hello, I'm [Your Name]</h1>
-            <p>Welcome to my portfolio. I create modern and minimalistic designs.</p>
-        </div>
-    </section>
-    
-    <section id="about">
-        <div class="content">
-            <h2>About Me</h2>
-            <p>[A brief introduction about yourself]</p>
-        </div>
-    </section>
-    
-    <section id="work">
-        <div class="content">
-            <h2>My Work</h2>
-            <div class="work-gallery">
-                <div class="work-item">
-                    <img src="project1.jpg" alt="Project 1">
-                    <p>Project 1 Description</p>
+<div class="row pt-5 allstuff snipcss-9NA42">
+    <div class="col-lg-9 mx-auto pt-5 about text-justify">
+        <div class="row teaser align-items-end">
+            <div class="col-sm-6">
+                <div class="title_text">
+                    <div id="firstname">SEBASTIN</div>
+                    <div id="lastname">SANTY</div>
                 </div>
-                <div class="work-item">
-                    <img src="project2.jpg" alt="Project 2">
-                    <p>Project 2 Description</p>
+                <span class="audio"><audio id="tpp-audio">
+                        <source src="data:audio/mpeg;base64,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" type="audio/mpeg">
+                    </audio>
+                    <div>(səbæstɪn sænti) <button onclick="document.getElementById('tpp-audio').play()" id="style-KP6vA" class="style-KP6vA"><svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="20" height="20" viewBox="0 0 75 75">
+                                <path d="M39.389,13.769 L22.235,28.606 L6,28.606 L6,47.699 L21.989,47.699 L39.389,62.75 L39.389,13.769z" style="stroke:#111;stroke-width:5;stroke-linejoin:round;fill:#111;"></path>
+                                <path d="M48,27.6a19.5,19.5 0 0 1 0,21.4M55.1,20.5a30,30 0 0 1 0,35.6M61.6,14a38.8,38.8 0 0 1 0,48.6" style="fill:none;stroke:#111;stroke-width:5;stroke-linecap:round"></path>
+                            </svg></button></div>
+                </span>
+                <div class="minor_text style-SpDpT" id="style-SpDpT">
+                    <a class="menulink" target="_blank" style="color:#404040" href="assets/sebastin_cv.pdf"><i class="ai ai-cv-square ai-1x headtag"></i></a><span class="headtagsep"></span>
+                    <a class="menulink" target="_blank" style="color:#2873EB" href="https://scholar.google.com/citations?user=HsyMg08AAAAJ"><i class="ai ai-google-scholar-square ai-1x headtag"></i></a><span class="headtagsep"></span>
+                    <a class="menulink" target="_blank" style="color:#211F1F" href="https://github.com/sebastinsanty"><i class="fab fa-github-square fa-1x headtag"></i></a><span class="headtagsep"></span>
+                    <a class="menulink" target="_blank" style="color:#2867b2" href="https://www.linkedin.com/in/sebastinsanty/"><i class="fab fa-linkedin fa-1x headtag"></i></a><span class="headtagsep"></span>
+                    <a class="menulink" target="_blank" style="color:#1da1f2" href="https://twitter.com/sebastinsanty"><i class="fab fa-twitter-square fa-1x headtag"></i></a><span class="headtagsep"></span>
+                    <a class="menulink" href="#" style="color:#404040">
+                        <font id="emailicon" class="style-aczpp"><span onclick="emailIconScramble.initAnimatedBubbleSort();return false;"><i class="fas fa-envelope-square fa-1x headtag"></i></span></font>
+                    </a>
                 </div>
-                <!-- Add more projects as needed -->
+            </div>
+            <div class="col-sm-6 text-right">
+                <img lsrc="images/rainier.jpeg" class="profilepic float-right img-fluid rounded" src="https://sebastinsanty.com/images/rainier.jpeg">
             </div>
         </div>
-    </section>
-    
-    <section id="contact">
-        <div class="content">
-            <h2>Contact</h2>
-            <p>Feel free to reach out to me at <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+        <div class="mainpara">
+            <p class="subpara"> I am a PhD student in Computer Science at the <a class="paralink" href="https://www.cs.washington.edu/" target="_blank">University of Washington</a>, advised by <a class="paralink" href="http://www.ranjaykrishna.com/" target="_blank">Ranjay Krishna</a>. My work falls at the intersection of <a class="paralink" href="https://en.wikipedia.org/wiki/Natural_language_processing" target="_blank">NLP</a> and <a class="paralink" href="https://en.wikipedia.org/wiki/Human%E2%80%93computer_interaction" target="_blank">HCI</a>. </p>
+            <p class="subpara lingtheme"> Most of my research has been around inclusionary aspects of NLP systems. For example, my previous works have found that <a href="#acl2023">NLP systems have positionalities</a> that make them <a href="#acl2020">not work well for the broader population</a>, eventually marginalizing communities such as <a href="#lrec2020">those who speak "low resource" languages</a>. In our recent studies, we found that inclusion not only benefits the society, but also <a href="#nguyen2024">has the potential to improve performance of ML systems</a>, ultimately contributing to AI progress. </p>
+            <p class="subpara uitheme"> I also spend time thinking about and designing <a href="https://dl.acm.org/doi/10.1145/329124.329126" target="_blank">seamless human-computer interactions</a>. This is mostly manifested in the form of user interfaces, some of which are now part of <a href="https://github.com/mozilla/gecko-dev/commits?author=sebastinssanty" target="_blank">Firefox</a>, <a href="https://github.com/mozilla-bteam/bmo/commits?author=sebastinsanty" target="_blank">Bugzilla</a>, &amp; other open-source projects, <a href="#nli">published as research papers</a>, or simply ended up as <a href="http://sebastinsanty.com/projects/" target="_blank">fun side projects</a>. I believe we still have a long way to go in figuring out naturalistic interactions. Some of my thoughts on this topic is covered in a <a href="https://docs.google.com/presentation/d/1s8cb7biXJ3FflVaa3MoyAr1XifQBzTzPFKyKeCn-cUI/edit?usp=sharing/" target="_blank">recent tutorial we gave at EMNLP 2023</a>. </p>
         </div>
-    </section>
-    
-    <footer>
-        <p>&copy; 2024 [Your Name]. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+        <div id="papers" class="subtitle_text">RESEARCH</div>
+        <div>
+            <h4 class="theme lingtitle">Linguistic Diversity</h4>
+        </div>
+        <div id="nguyen2024" class="row">
+            <div class="col-lg-12">
+                <div class="talk my-2 pl-2">
+                    <span class="papertitle"><a href="https://arxiv.org/abs/2310.14356" target="_blank">Multilingual Diversity Improves Vision-Language Representations</a></span><br>
+                    <div class="d-flex">
+                        <span class="authors"> Thao Nguyen, Matthew Wallingford, <span class="thisauthor">Sebastin Santy</span>, Wei-Chiu Ma, Sewoong Oh, Ludwig Schmidt, <br>Pang Wei Koh, Ranjay Krishna </span>
+                        <span class="ml-auto tagspan">
+                            <br>
+                            <a class="tag" href="https://arxiv.org/pdf/2405.16915.pdf" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Paper PDF">PDF</a><span class="tagsep">●</span>
+                            <a class="tag" href="https://arxiv.org/abs/2405.16915" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Paper Abstract">ABS</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="ye2023" class="row">
+            <div class="col-lg-12">
+                <div class="talk my-2 pl-2">
+                    <span class="papertitle"><a href="https://arxiv.org/abs/2310.14356" target="_blank">Vision Datasets and Models Exhibit Cultural and Linguistic Diversity in Perception</a></span><br>
+                    <div class="d-flex">
+                        <span class="authors"> Andre Ye, <span class="thisauthor">Sebastin Santy</span>, Jena D. Hwang, Amy X. Zhang, Ranjay Krishna </span>
+                        <span class="ml-auto tagspan">
+                            <a class="tag" href="https://arxiv.org/pdf/2310.14356.pdf" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Paper PDF">PDF</a><span class="tagsep">●</span>
+                            <a class="tag" href="https://arxiv.org/abs/2310.14356" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Paper Abstract">ABS</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="acl2023" class="row">
+            <div class="col-lg-12">
+                <div class="talk my-2 pl-2">
+                    <span class="papertitle"><a href="https://sebastinsanty.com/kaleido" target="_blank">NLPositionality: Characterizing Design Biases of Datasets and Models</a></span><br>
+                    <div class="d-flex">
+                        <span class="authors">
+                            <span class="thisauthor">Sebastin Santy*</span>, Jenny Liang*, Ronan Le Bras, Katharina Reinecke, Maarten Sap </span>
+                    </div>
+                    <div class="d-flex">
+                        <span class="conf"><b href="#">ACL 2023</b>
+                            <span class="award ml-2 pt-1"><span class="award-icon"><i class="fas fa-award"></i></span> <span>OUTSTANDING PAPER</span></span>
+                            <span class="tagseparticle style-XZM8p" id="style-XZM8p">◦</span>
+                            <a class="article" href="https://blog.ml.cmu.edu/2024/03/01/nlpositionality-characterizing-design-biases-of-datasets-and-models/" target="_blank">CMU ML Blog</a>
+                        </span>
+                        <span class="ml-auto tagspan">
+                            <a class="tag" href="http://nlpositionality.cs.washington.edu/" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Website">WEB</a><span class="tagsep">●</span>
+                            <a class="tag" href="https://aclanthology.org/2023.acl-long.505.pdf" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Paper PDF">PDF</a><span class="tagsep">●</span>
+                            <a class="tag" href="https://aclanthology.org/2023.acl-long.505/" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Paper Abstract">ABS</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="acl2020" class="row">
+            <div class="col-lg-12">
+                <div class="talk my-2 pl-2">
+                    <span class="papertitle"><a href="https://microsoft.github.io/linguisticdiversity/" target="_blank">The State and Fate of Linguistic Diversity and Inclusion in the NLP World</a></span><br>
+                    <span class="authors">
+                        <span class="thisauthor">Sebastin Santy</span>*, Pratik Joshi*, Amar Budhiraja*, Kalika Bali, Monojit Choudhury </span>
+                    <div class="d-flex">
+                        <span class="conf"><b>ACL 2020</b><span class="tagseparticle style-jBoLA" id="style-jBoLA">◦</span>
+                            <a class="article" href="https://www.ftc.gov/news-events/news/speeches/remarks-commissioner-alvaro-m-bedoya-national-association-attorneys-general-presidential-summit" target="_blank">US FTC</a><span class="tagseparticle">◦</span>
+                            <a class="article" href="https://nlpnewsletter.substack.com/p/reviewing-taking-stock-theme-papers-poisoning-and-stealing-models-multimodal-generation-240687" target="_blank">NLP News</a><span class="tagseparticle">◦</span>
+                            <a class="article" href="https://ruder.io/nlp-beyond-english/" target="_blank">NLP Beyond English</a><span class="tagseparticle">◦</span>
+                            <a class="article" href="https://qz.com/1920191/internet-translation-access-creates-a-powerful-digital-divide/" target="_blank">Quartz</a><span class="tagseparticle">◦</span>
+                            <a class="article" href="https://www.underratedml.com/episodes/episode-05-language-independence-and-material-properties" target="_blank">Underrated ML</a>
+                        </span>
+                        <span class="ml-auto tagspan">
+                            <a class="tag" href="https://microsoft.github.io/linguisticdiversity/" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Website">WEB</a><span class="tagsep">●</span>
+                            <a class="tag" href="https://www.youtube.com/watch?v=UJwJd0mJ1SQ" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Video">TALK</a><span class="tagsep">●</span>
+                            <a class="tag" href="https://www.aclweb.org/anthology/2020.acl-main.560.pdf" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Paper PDF">PDF</a><span class="tagsep">●</span>
+                            <a class="tag" href="https://www.aclweb.org/anthology/2020.acl-main.560/" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Paper Abstract">ABS</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h4 class="theme lingtitle">Language System Deployments</h4>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="talk my-2 pl-2">
+                    <span class="papertitle"><a href="https://microsoft.github.io/inmt/" target="_blank">Language Translation as a Socio-Technical System</a></span><br>
+                    <span class="authors">
+                        <span class="thisauthor">Sebastin Santy</span>, Kalika Bali, Monojit Choudhury, Sandipan Dandapat, Tanuja Ganu, Anurag Shukla, <br>Jahanvi Shah, Vivek Seshadri<br>
+                    </span>
+                    <div class="d-flex">
+                        <span class="conf"><b href="#">COMPASS 2021</b><span class="tagseparticle style-pHyoj" id="style-pHyoj">◦</span>
+                            <a class="article" href="https://lifestyle.livemint.com/smart-living/innovation/now-a-unique-machine-translation-tool-from-hindi-to-gondi-111634483510602.html" target="_blank">Mint Lounge</a>
+                        </span>
+                        <span class="ml-auto tagspan">
+                            <a class="tag" href="assets/INMT_COMPASS_talk.pdf" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Paper PDF">SLIDES</a><span class="tagsep">●</span>
+                            <a class="tag" href="assets/INMT__COMPASS_2021_Final.pdf" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Paper PDF">PDF</a><span class="tagsep">●</span>
+                            <a class="tag" href="https://dl.acm.org/doi/10.1145/3460112.3471954" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Paper Abstract">ABS</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="lrec2020" class="row">
+            <div class="col-lg-12">
+                <div class="talk my-2 pl-2">
+                    <span class="papertitle"><a href="https://www.aclweb.org/anthology/2020.lrec-1.345/" target="_blank">Learnings from Technological Interventions in a Low Resource Language</a></span><br>
+                    <span class="authors">
+                        <span class="thisauthor">Sebastin Santy</span>*, Devansh Mehta*, Ramaravind Kommiya Mothilal, Brij Mohan Lal Srivastava, <br>Alok Sharma, Anurag Shukla, Vishnu Prasad, Venkanna U, Amit Sharma, Kalika Bali </span>
+                    <span class="noter"></span><br>
+                    <div class="d-flex">
+                        <span class="conf"><b href="https://lrec2020.lrec-conf.org/">LREC 2020</b><span class="tagseparticle style-4mfLp" id="style-4mfLp">◦</span>
+                            <a class="article" href="https://caravanmagazine.in/amp/culture/gond-gondi-koitur-dictionary-adivasi" target="_blank">The Caravan</a><span class="tagseparticle">◦</span>
+                            <a class="article" href="http://toi.in/HcX74b/a31g" target="_blank">Times of India</a><span class="tagseparticle">◦</span>
+                            <a class="article" href="https://www.hindustantimes.com/india-news/gonds-in-chhattisgarh-get-app-for-news-in-their-language/story-uQEDqDGBIPty7rMCNskTsK.html" target="_blank">Hindustan Times</a><span class="tagseparticle">◦</span>
+                            <a class="article" href="https://www.etvbharat.com/hindi/chhattisgarh/state/raipur/now-tribal-can-hear-news-and-stories-in-their-language/ct20190802191729141" target="_blank">ETV</a>
+                        </span>
+                        <span class="ml-auto tagspan">
+                            <a class="tag" href="https://www.aclweb.org/anthology/2020.lrec-1.345.pdf" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Paper PDF">PDF</a><span class="tagsep">●</span>
+                            <a class="tag" href="https://www.aclweb.org/anthology/2020.lrec-1.345/" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Paper Abstract">ABS</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="talk my-2 pl-2">
+                    <span class="papertitle"><a href="https://arxiv.org/abs/1912.03457" target="_blank">Unsung Challenges of Building and Deploying Language Technologies for LRL Communities</a></span><br>
+                    <span class="authors"> Pratik Joshi, Christain Barnes, <span class="thisauthor">Sebastin Santy</span>, Simran Khanuja, Sanket Shah, Anirudh Srinivasan, <br>Satwik Bhattamishra, Sunayana Sitaram, Monojit Choudhury, Kalika Bali<br>
+                    </span>
+                    <div class="d-flex">
+                        <span class="conf"><b href="https://ltrc.iiit.ac.in/icon2019/">ICON 2019</b><span class="tagseparticle style-ZlaI4" id="style-ZlaI4">◦</span>
+                            <a class="article" href="https://indianexpress.com/article/technology/how-microsofts-project-ellora-is-helping-small-languages-like-gondi-mundari-become-eloquent-for-the-digital-world-8413587/" target="_blank">Indian Express</a><span class="tagseparticle">◦</span>
+                            <a class="article" href="https://news.microsoft.com/en-in/features/microsoft-research-project-helps-languages-survive-and-thrive/" target="_blank">Microsoft Stories</a>
+                        </span>
+                        <span class="ml-auto tagspan">
+                            <a class="tag" href="assets/ICON_presentation.pdf" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Slides">SLIDES</a><span class="tagsep">●</span>
+                            <a class="tag" href="https://arxiv.org/pdf/1912.03457.pdf" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Paper PDF">PDF</a><span class="tagsep">●</span>
+                            <a class="tag" href="https://arxiv.org/abs/1912.03457" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Paper Abstract">ABS</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h4 id="nli" class="theme uititle">User Interfaces</h4>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="talk my-2 pl-2">
+                    <span class="papertitle"><a href="http://leetprompt.io/" target="_blank">BLIP: Facilitating the Exploration of Undesirable Consequences of Digital Technologies</a></span><br>
+                    <span class="authors"> Rock Yuren Pang, <span class="thisauthor">Sebastin Santy</span>, René Just, Katharina Reinecke </span>
+                    <div class="d-flex">
+                        <span class="conf"><b href="#">CHI 2024</b>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="talk my-2 pl-2">
+                    <span class="papertitle"><a href="http://leetprompt.io/" target="_blank">LeetPrompt: Leveraging Collective Human Intelligence to Study Large Language Models</a></span><br>
+                    <span class="authors">
+                        <span class="thisauthor">Sebastin Santy</span>, Ayana Bharadwaj, Sahith Dambekodi, Alex Albert, Cathy Yuan, Ranjay Krishna </span>
+                    <div class="d-flex">
+                        <span class="conf"><b href="#">AI &amp; HCI @ ICML 2023</b>
+                        </span>
+                        <span class="ml-auto tagspan">
+                            <a class="tag" href="insubmission/NeurIPS2023-LeetPrompt.pdf" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Paper PDF">PDF</a><span class="tagsep">●</span>
+                            <a class="tag" href="https://leetprompt.io/play/" target="_blank" data-toggle="tooltip" data-placement="bottom" title="LeetPrompt Play">PLAY</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="emnlp2019" class="row">
+            <div class="col-lg-12">
+                <div class="talk my-2 pl-2">
+                    <span class="papertitle"><a href="https://microsoft.github.io/inmt/" target="_blank">INMT: Interactive Neural Machine Translation</a></span><br>
+                    <span class="authors">
+                        <span class="thisauthor">Sebastin Santy</span>, Sandipan Dandapat, Monojit Choudhury, Kalika Bali<br>
+                    </span>
+                    <div class="d-flex">
+                        <span class="conf"><b>EMNLP 2019 Demo</b><span class="tagseparticle style-1QK8N" id="style-1QK8N">◦</span>
+                            <a class="article" href="https://slate.com/technology/2023/01/storyweaver-ai-translation-tools-language-preservation.html" target="_blank">Slate</a>
+                        </span>
+                        <span class="ml-auto tagspan">
+                            <a class="tag p" href="https://microsoft.github.io/inmt/" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Website">WEB</a><span class="tagsep">●</span>
+                            <a class="tag" href="https://github.com/microsoft/inmt" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Code">CODE</a><span class="tagsep">●</span>
+                            <a class="tag" href="assets/inmt_poster.pdf" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Poster">POSTER</a><span class="tagsep">●</span>
+                            <a class="tag" href="https://www.aclweb.org/anthology/D19-3018.pdf" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Paper PDF">PDF</a><span class="tagsep">●</span>
+                            <a class="tag" href="https://www.aclweb.org/anthology/D19-3018/" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Paper Abstract">ABS</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="talk my-2 pl-2">
+                    <span class="papertitle"><a href="https://www.aclweb.org/anthology/D19-5907/" target="_blank">CoSSAT: Code-Switched Speech Annotation Tool</a></span><br>
+                    <span class="authors"> Sanket Shah, Pratik Joshi, <span class="thisauthor">Sebastin Santy</span>, Sunayana Sitaram<br>
+                    </span>
+                    <div class="d-flex">
+                        <span class="conf"><b>AnnoNLP @ EMNLP 2019</b></span>
+                        <span class="ml-auto tagspan">
+                            <a class="tag" href="assets/cossat.pdf" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Slides">SLIDES</a><span class="tagsep">●</span>
+                            <a class="tag" href="https://www.aclweb.org/anthology/D19-5907.pdf" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Paper PDF">PDF</a><span class="tagsep">●</span>
+                            <a class="tag" href="https://www.aclweb.org/anthology/D19-5907/" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Paper Abstract">ABS</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <a class="" data-toggle="collapse" href="#ml-button" role="button" aria-expanded="false" aria-controls="ml-button">
+                <span class="collapsed">
+                    <h4 class="theme-muted">Others ▾</h4>
+                </span>
+                <span class="expanded">
+                    <h4 class="theme">Others ▴</h4>
+                </span>
+            </a>
+        </div>
+        <div class="collapse" id="ml-button">
+            <div id="acl2021" class="row">
+                <div class="col-lg-12">
+                    <div class="talk my-2 pl-2">
+                        <span class="papertitle"><a target="_blank" href="https://aclanthology.org/2021.findings-acl.414/">Use of Formal Ethical Reviews in NLP Literature: Historical Trends and Current Practices</a></span><br>
+                        <span class="authors">
+                            <span class="thisauthor">Sebastin Santy</span>, Anku Rani, Monojit Choudhury </span>
+                        <div class="d-flex">
+                            <span class="conf"><b>ACL 2021 Findings</b><span class="tagseparticle style-cBHxr" id="style-cBHxr">◦</span>
+                                <a class="article" href="https://medium.com/@emilymenonbender/on-academic-freedom-and-ethics-review-continuing-the-conversation-256e5cc3b542" target="_blank">Academic Freedom and Ethics Review</a>
+                            </span>
+                            <span class="ml-auto tagspan">
+                                <a class="tag" href="assets/ACL_IRB_slides.pdf" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Slides">SLIDES</a><span class="tagsep">●</span>
+                                <a class="tag" href="assets/irb_acl21.pdf" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Paper PDF">POSTER</a><span class="tagsep">●</span>
+                                <a class="tag" href="https://aclanthology.org/2021.findings-acl.414.pdf" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Paper PDF">PDF</a><span class="tagsep">●</span>
+                                <a class="tag" href="https://arxiv.org/abs/2106.01105" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Paper Abstract">ABS</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="talk my-2 pl-2">
+                        <span class="papertitle"><a href="#">BERTologiCoMix: How does Code-Mixing interact with Multilingual BERT?</a></span><br>
+                        <span class="authors">
+                            <span class="thisauthor">Sebastin Santy</span>*, Anirudh Srinivasan*, Monojit Choudhury<br>
+                        </span>
+                        <div class="d-flex">
+                            <span class="conf"><b href="#">AdaptNLP@EACL 2021</b>
+                            </span>
+                            <span class="ml-auto tagspan">
+                                <a class="tag" href="assets/santy2021bertologicomix_poster.pdf" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Poster">POSTER</a><span class="tagsep">●</span>
+                                <a class="tag" href="https://www.aclweb.org/anthology/2021.adaptnlp-1.12.pdf" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Paper PDF">PDF</a><span class="tagsep">●</span>
+                                <a class="tag" href="https://www.aclweb.org/anthology/2021.adaptnlp-1.12/" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Paper Abstract">ABS</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="talk my-2 pl-2">
+                        <span class="papertitle"><a href="https://usercontext.github.io/SceneTask/" target="_blank">Towards Task Understanding in Visual Settings</a></span><br>
+                        <span class="authors">
+                            <span class="thisauthor">Sebastin Santy</span>, Wazeer Zulfikar, Rishabh Mehrotra, Emine Yilmaz<br>
+                        </span>
+                        <div class="d-flex">
+                            <span class="conf"><b href="#">AAAI 2019 (Student Abstract)</b>
+                            </span>
+                            <span class="ml-auto tagspan">
+                                <a class="tag" href="https://usercontext.github.io/SceneTask/resources/images/poster.pdf" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Poster">POSTER</a><span class="tagsep">●</span>
+                                <a class="tag" href="https://usercontext.github.io/SceneTask/resources/images/manuscript.pdf" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Paper PDF">PDF</a><span class="tagsep">●</span>
+                                <a class="tag" href="https://usercontext.github.io/SceneTask/" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Paper Abstract">ABS</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="subtitle_text">TALKS</div>
+        <div class="pb-1">
+            <div class="talk my-2 pl-2">
+                <span class="papertitle"><a href="https://nlp-hci.github.io/tutorial/">Designing, Evaluating, and Learning from Humans Interacting with NLP Models</a></span><br>
+                <span class="authors"> A conference tutorial on research in the intersection of NLP and HCI<br>
+                </span>
+                <div class="d-flex">
+                    <span class="conf"><b>EMNLP 2023</b> - Singapore</span><br>
+                    <span class="ml-auto tagspan">
+                        <a class="tag" href="https://nlp-hci.github.io/tutorial/" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Paper Abstract">WEB</a><span class="tagsep">●</span>
+                        <a class="tag" href="https://docs.google.com/presentation/d/1s8cb7biXJ3FflVaa3MoyAr1XifQBzTzPFKyKeCn-cUI/edit?usp=sharing" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Video">SLIDES</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="pb-1">
+            <div class="talk my-2 pl-2">
+                <span class="papertitle"><a href="https://www.youtube.com/watch?v=UJwJd0mJ1SQ" target="_blank">The State and Fate of Linguistic Diversity in the NLP world</a></span><br>
+                <span class="authors"> A casual talk about our ACL 2020 paper on the same topic<br>
+                </span>
+                <div class="d-flex">
+                    <span class="conf"><b>NLP with Friends</b> - Remote</span><br>
+                    <span class="ml-auto tagspan">
+                        <a class="tag" href="https://nlpwithfriends.com/speakers/pratik-sebastin" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Paper Abstract">ABS</a><span class="tagsep">●</span>
+                        <a class="tag" href="https://www.youtube.com/watch?v=UJwJd0mJ1SQ" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Video">TALK</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="pb-1">
+            <div class="talk my-2 pl-2">
+                <span class="papertitle"><a href="https://www.youtube.com/watch?v=eMtuzjn_Xks" target="_blank">Repeatable Data Setup for Repeatable Science</a></span><br>
+                <span class="authors"> Talked about DataDepsGenerators.jl and Reproducible AI.<br>
+                </span>
+                <div class="d-flex">
+                    <span class="conf"><b>PyData 2018</b> - New York City, USA</span><br>
+                    <span class="ml-auto tagspan">
+                        <a class="tag" href="https://pydata.org/nyc2018/schedule/presentation/14/" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Paper Abstract">ABS</a><span class="tagsep">●</span>
+                        <a class="tag" href="https://www.youtube.com/watch?v=eMtuzjn_Xks" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Video">TALK </a>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="pt-4">
+            <b>Miscellaneous</b><br>
+            <span class="authors">Resources: <a href="assets/UW_PhD_SOP_Public.pdf" target="_blank">My PhD Statement</a>, <a href="https://github.com/SebastinSanty/Just-Another-Research-CV" target="_blank">CV Template</a>
+            </span><br>
+        </div>
+        <div class="row justify-content-center pt-5 pb-5 style-zpNqn" id="style-zpNqn">
+            <div>
+                <a target="_blank" href="https://github.com/SebastinSanty/minimal-research-theme" id="style-oF1sp" class="style-oF1sp">Grab this theme</a><span class="tagseparticle">◦</span> Inspiration from&nbsp;<a target="_blank" href="http://graphics.stanford.edu/~kayvonf/" id="style-8hOBG" class="style-8hOBG">Kayvon Fatahalian's homepage</a>
+            </div>
+        </div>
+    </div>
+</div>
