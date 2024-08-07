@@ -1,5 +1,5 @@
 // Initialize font properties
-const fontname = "Barlow";
+const fontname = "Montserrat";
 const fontweights = [300, 400];
 
 // Color properties
