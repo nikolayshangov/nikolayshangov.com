@@ -4,13 +4,10 @@
 }
 
 a:hover {
-    /* font-weight: 400; */
     text-decoration: none;
     transition-duration: 0.3s;
     transition-timing-function: linear;
-    /* color: #444; */
 }
-
 
 .noter {
     font-size: 9pt;
@@ -44,14 +41,10 @@ a:hover {
 .profilepic {
     width: 150px;
     border-radius: 40%;
-    /* filter: grayscale(100%); */
 }
 
 @media (min-width: 768px) {
     .fixed-posi {
-        /* width: 50%;
-            margin-left: 50%;
-            min-height:100%; */
         position: fixed;
     }
 }
@@ -70,16 +63,34 @@ a:hover {
         border-radius: 40%;
         padding-top: 0px !important;
         padding-bottom: 0px !important;
-        /* filter: grayscale(100%); */
     }
 
     .menur {
         padding-top: 18px !important;
     }
-
 }
 
-/* .thisauthor {
-          color: #111;
-          text-decoration: underline;
-    } */
+body {
+    background-color: black;
+    color: white;
+}
+
+.name {
+    color: white;
+}
+
+a {
+    color: #0062cc;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+.institution {
+    color: white;
+}
+
+.years {
+    color: white;
+}

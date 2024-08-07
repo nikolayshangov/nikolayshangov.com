@@ -1,52 +1,41 @@
 // Initialize font properties
 const fontname = "Barlow";
-const fontweights = [300, 400]
+const fontweights = [300, 400];
 
 // Color properties
-const basecolor = "#222222";
+const basecolor = "#ffffff";  // Changed to white
 const accentcolor = "#0062cc";
-const highlightcolor = "#111";
-
-// const basecolor = "#888";
-// const accentcolor = "#222";
-// const highlight = "#111";
+const highlightcolor = "#ffffff";  // Changed to white
 
 // Body properties
 const bodyfontweight = 300;
 const bodyfontsize = "12pt";
-const backgroundcolor = "#fff";
+const backgroundcolor = "#000000";  // Changed to black
 
 // Link properties
 const acolor = accentcolor;
 const adecoration = "none";
-// const ahovercolor = accentcolor;
-// const ahoverduration = "0.3s";
-// const ahoverdecoration = "none"; //none, underline, overline, dotted, color (https://www.w3schools.com/cssref/pr_text_text-decoration.asp)
 
 // Menu properties
 const menucolor = basecolor;
 const menufontsize = "14pt";
 const menudecoration = "none";
-// const menuhover = accentcolor;
-// const menuhoverduration = "0.3s";
-// const menuhoverdecoration = "none"; //none, underline, overline, dotted, color (https://www.w3schools.com/cssref/pr_text_text-decoration.asp)
 
 // Header properties
-const headercolor = "#6c757d";
+const headercolor = "#ffffff";  // Changed to white
 const headerfontsize = "18pt";
 const headerdecoration = "none";
 const namecolor = highlightcolor;
 const namefontsize = "23pt";
 
-
 // Publication properties
-const ptitlecolor = "#222222";
+const ptitlecolor = basecolor;
 const ptitlefontsize = bodyfontsize;
 const ptitleweight = 400;
 const ptitledecoration = "none";
 const ptitlestyle = "normal";
 
-const authorcolor = "#6c757d";
+const authorcolor = "#ffffff";  // Changed to white
 const authorweight = bodyfontweight;
 const authordecoration = "none";
 const authorstyle = "normal";
@@ -68,14 +57,13 @@ const instyearsize = "11px";
 
 //     .institution {
 //             font - size: 12px;
-//             color: #222;
+//             color: #ffffff;  // Changed to white
 //         }
 //   .years {
 //             font - size: 11px;
-//             color: #888;
+//             color: #ffffff;  // Changed to white
 //         }
 
-// Works for sans serif, change otherwise
 $("head").append("<link href='https://fonts.googleapis.com/css2?family=" + fontname + ":wght@" + fontweights.join(';') + "&display=swap' rel='stylesheet' type='text/css'>");
 $("body").css("font-family", fontname);
 
