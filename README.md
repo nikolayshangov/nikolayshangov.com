@@ -1,2 +1,2 @@
 ### Nikolay Shangov
-[nikolayshangov.com](https://nikolayshangov.com/)
+[www.nikolayshangov.com](https://nikolayshangov.com/)
